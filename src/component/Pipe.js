@@ -1,6 +1,6 @@
 import React from "react";
-import topPipeImg from "../image/pipe-top.png"
-import bottomPipeImg from "../image/pipe-bottom.png"
+import topPipeImg from "../image/pipe-top.png";
+import bottomPipeImg from "../image/pipe-bottom.png";
 
 const stylePipe = {};
 const stylePipeTop = {
@@ -9,9 +9,8 @@ const stylePipeTop = {
   top: 0,
   width: 52,
   height: 206,
-  backgroundImage:`url(${topPipeImg})`,
-  backgroundPosition:'bottom'
-
+  backgroundImage: `url(${topPipeImg})`,
+  backgroundPosition: "bottom",
 };
 const stylePipeBottom = {
   position: "absolute",
@@ -19,7 +18,7 @@ const stylePipeBottom = {
   top: 300,
   width: 52,
   height: 206,
-  backgroundImage:`url(${bottomPipeImg})`,
+  backgroundImage: `url(${bottomPipeImg})`,
 };
 
 class Pipe extends React.Component {

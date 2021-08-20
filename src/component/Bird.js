@@ -1,18 +1,28 @@
 import React from "react";
-import birdImg from "../image/bird.png"
-const styleBird = {
-  position: "absolute",
-  top: 256,
-  left: 144,
-  width: 37,
-  height: 26,
-  backgroundImage: `url(${birdImg})`,
-};
+import { connect } from "react-redux";
+import birdImg from "../image/bird.png";
+// const styleBird = {
 
+// };
 class Bird extends React.Component {
   render() {
-    return <div style={styleBird}></div>;
+    console.log(this.props.y);
+    return (
+      <div
+        style={{
+          position: "absolute",
+          top: this.props.y,
+          left: 144,
+          width: 37,
+          height: 26,
+          backgroundImage: `url(${birdImg})`,
+        }}
+      ></div>
+    );
   }
 }
+const mapStateToProps = ({ bird }) => ({ y: bird.y });
 
-export default Bird;
+const mapDispatchToProps = () => {};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Bird);
