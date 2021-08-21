@@ -3,7 +3,6 @@ const game=(state={},action) => {
 switch(action.type){
     case 'START':
         return {...state,status:'playing'};
-
     default:
         return state;
 }
