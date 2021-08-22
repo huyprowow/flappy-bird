@@ -10,16 +10,17 @@ class Bird extends React.Component {
     // console.log(this.props.numDeg);
     const {y,numDeg} = this.props;
     return (
-      <div
+      <div id='bird'
         style={{
           position: "absolute",
-          top: y,
-          left: 144,
+          left: 120,
           width: 37,
           height: 26,
+          transition:'transform 120ms,top 300ms',
+           //de chin huong mat len khi bay (an space)
+          top: y,
           backgroundImage: `url(${birdImg})`,
           transform: `rotate(${numDeg}deg)`,
-          transition:'transform 200ms,top 200ms' //de chin huong mat len khi bay (an space)
         }}
       ></div>
     );

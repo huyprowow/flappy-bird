@@ -8,7 +8,9 @@ const bird = (state = initialState, action) => {
     case "FLY":
       return { ...state, y: state.y - 50, numDeg: -45 };
     case "FALL":
-      return { ...state, y: state.y + 20, numDeg: 0 };
+      return { ...state, y: state.y + 20, numDeg: 20 };
+    case 'OVER':
+      return initialState;
     default:
       return state;
   }

@@ -1,0 +1,7 @@
+body {
+  background-image: linear-gradient(#70c5ce, #dbda96);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 7vh;
+}

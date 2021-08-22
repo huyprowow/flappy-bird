@@ -4,13 +4,13 @@ import bottomPipeImg from "../image/pipe-bottom.png";
 import { connect } from "react-redux";
 class Pipe extends React.Component {
   render() {
-    let { x, pipes } = this.props;
-    console.log(pipes);
+    const { x, pipes } = this.props;
+    // console.log(pipes);
     return (
       <div style={{ position: "relative" }}>
         {pipes.map(({ topHeight }, i) => {
           return (
-            <div key={i}>
+            <div key={`pipe-${i}`}>
               <div
                 style={{
                   position: "absolute",
@@ -20,18 +20,18 @@ class Pipe extends React.Component {
                   height: topHeight,
                   backgroundImage: `url(${topPipeImg})`,
                   backgroundPosition: "bottom",
-                  transition: "transform 200ms,left 200ms",
+                  transition: "left 250ms",
                 }}
               ></div>
-              <div
+              <div id='pipe'
                 style={{
                   position: "absolute",
-                  left: x + i * 200,
-                  top: 300,
                   width: 52,
-                  height: topHeight + 100,
                   backgroundImage: `url(${bottomPipeImg})`,
-                  transition: "transform 200ms,left 200ms",
+                  transition: "left 250ms",
+                  top: topHeight + 100,
+                  left: x + i * 200,
+                  height: 512 - topHeight - 100,
                 }}
               ></div>
             </div>
