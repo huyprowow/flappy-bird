@@ -6,9 +6,9 @@ const initialState = {
 const bird = (state = initialState, action) => {
   switch (action.type) {
     case "FLY":
-      return { ...state, y: state.y - 50, numDeg: -45 };
+      return { ...state, y: state.y - 60, numDeg: -45 };
     case "FALL":
-      return { ...state, y: state.y + 20, numDeg: 20 };
+      return { ...state, y: state.y + 30, numDeg: 20 };
     case 'OVER':
       return initialState;
     default:

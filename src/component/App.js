@@ -6,6 +6,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <h1>space to start</h1>
         <Provider store={this.props.store}>
           <GameDisplay />
         </Provider>

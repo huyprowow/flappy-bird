@@ -9,7 +9,7 @@ const styleForeground = {
   backgroundImage: `url(${fgImg})`,
 };
 const Foreground = () => {
-  return <div id='fore-ground'style={styleForeground}></div>;
+  return <div id="fore-ground" style={styleForeground}></div>;
 };
 
 export default Foreground;

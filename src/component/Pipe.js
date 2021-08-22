@@ -20,7 +20,7 @@ class Pipe extends React.Component {
                   height: topHeight,
                   backgroundImage: `url(${topPipeImg})`,
                   backgroundPosition: "bottom",
-                  transition: "left 250ms",
+                  transition: "left 220ms",
                 }}
               ></div>
               <div id='pipe'
@@ -28,7 +28,7 @@ class Pipe extends React.Component {
                   position: "absolute",
                   width: 52,
                   backgroundImage: `url(${bottomPipeImg})`,
-                  transition: "left 250ms",
+                  transition: "left 220ms",
                   top: topHeight + 100,
                   left: x + i * 200,
                   height: 512 - topHeight - 100,
